@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>Tugas Texture</title>
+ <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
+</head>
+<body>
+ <a-scene>
+   <a-assets>
+      <img src="texture/stone/basecolor.png" id="base">
+      <img src="texture/stone/normal.png" id="normal">
+      <img src="texture/stone/height.png" id="height">
+   </a-assets>
+    <a-box
+    src ="#base"
+     repeat="2 2"
+     normal-map="#normal"
+     segments-height = 10
+     segments-width = 10
+     segments-depth = 10
+     normal-texture-repeat="2 2"
+     displacement-map="#height"
+     displacement-bias = 10
+     displacement-scale = 0.1
+     displacement-texture-repeat="2 2"
+     position = "0 1.5 -2"
+     color="pink"
+    ></a-box>   
+    <a-sphere
+    src="#base"
+    position="1 1.5 -2"
+    radius = 0.5
+    color="pink"
+    ></a-sphere>
+    
+ </a-scene>
+
+</body> 
+</html>
